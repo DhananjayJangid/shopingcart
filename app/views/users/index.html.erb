@@ -1,0 +1,30 @@
+<!-- app/views/users/index.html.erb -->
+
+<h1>All Users</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>Phn no</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.product_name %></td>
+        <td><%= user.address %></td>
+        <td><%= user.phn_no%></td>
+        <td>
+          <%= link_to 'Show', user, class: 'btn btn-primary btn-sm' %>
+          <%= link_to 'Edit', edit_user_path(user), class: 'btn btn-secondary btn-sm' %>
+          <%= link_to 'Delete', user_path(user), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-sm' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New User', new_user_path, class: 'btn btn-success' %>

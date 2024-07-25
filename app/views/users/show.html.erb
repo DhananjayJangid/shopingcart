@@ -1,0 +1,8 @@
+<h1>User Details</h1>
+<p><strong>Name:</strong> <%= @user.product_name %></p>
+<p><strong>Email:</strong> <%= @user.address %></p>
+<p><strong>Email:</strong> <%= @user.phn_no %></p>
+
+<%= link_to 'Edit', edit_user_path(@user), class: 'btn btn-primary' %>
+<%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+<%= link_to 'Back', users_path, class: 'btn btn-default' %>

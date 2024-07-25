@@ -1,0 +1,18 @@
+<!-- app/views/products/new.html.erb -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>New Product</title>
+</head>
+<body>
+
+<h2>New Product</h2>
+
+<%= render 'form', product: @product %>
+
+<%= link_to 'Back', products_path, class: 'btn btn-secondary' %>
+
+</body>
+</html>
